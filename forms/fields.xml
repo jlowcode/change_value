@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form>
+    <fields addfieldpath="/administrator/components/com_fabrik/models/fields" name="params">
+        <fieldset label="COM_FABRIK_CHANGE_CASE" name="plg-list-changes_case">
+            <field
+				name="transform_case"
+				type="list"
+				label="PLG_FABRIK_LIST_TRANSFORM_ELEMENT_LABEL"
+                description="PLG_FABRIK_LIST_TRANSFORM_ELEMENT_DESC"
+				filter="integer"
+				>
+				<option value="">PLG_ELEMENT_FIELD_SELECT</option>
+				<option value="0">PLG_ELEMENT_FIELD_UPPERCASE</option>
+                <option value="1">PLG_ELEMENT_FIELD_LOWERCASE</option>
+                <option value="2">PLG_ELEMENT_FIELD_FIRST_UPPERCASE</option>
+                <option value="3">PLG_ELEMENT_FIELD_WORDS_UPPERCASE</option>
+			</field>
+
+            <field
+				name="list_case_elements"
+                label="PLG_FABRIK_LIST_CHANGE_ELEMENT_LABEL"
+                description="PLG_FABRIK_LIST_CHANGE_ELEMENT_DESC"
+                type="listfields"
+            />            
+        </fieldset>
+
+        <fieldset label="COM_FABRIK_CHANGE_VALUE" name="plg-list-change_allvalues">
+            <field name="list_values_elements"
+                   label="PLG_FABRIK_LIST_CHANGE_ELEMENT_LABEL"
+                   description="PLG_FABRIK_LIST_CHANGE_ELEMENT_DESC"
+                   type="listfields"
+            />
+
+            <field name="value_current"
+		           type="text"
+		           class="input-large"
+		           label="COM_FABRIK_FIELD_CURRENT_LABEL"
+		           description="COM_FABRIK_FIELD_CURRENT_DESC"
+		    />
+            <field
+				name="comparison"
+				type="list"
+				label="PLG_FABRIK_LIST_COMPARISON_ELEMENT_LABEL"
+                description="PLG_FABRIK_LIST_COMPARISON_ELEMENT_DESC"
+				filter="integer"
+				>
+				<option value="=">PLG_ELEMENT_FIELD_EQUAL</option>
+                <option value="like">PLG_ELEMENT_FIELD_LIKE</option>
+			</field>
+            <field name="all_records" 
+			       type="checkbox"
+			       default="0"
+			       label="COM_FABRIK_FIELD_ALL_RECORDS_LABEL" 
+			       description="COM_FABRIK_FIELD_ALL_RECORDS_DESC"
+            />
+            
+            <field name="value_update"
+		           type="text"
+		           class="input-large"
+		           label="COM_FABRIK_FIELD_UPDATE_LABEL"
+		           description="COM_FABRIK_FIELD_UPDATE_DESC"
+		    />
+            <field name="value_null" 
+			       type="checkbox"
+			       default="0"
+			       label="COM_FABRIK_FIELD_VALUE_NULL_LABEL" 
+			       description="COM_FABRIK_FIELD_VALUE_NULL_DESC"
+            />
+        </fieldset>
+    </fields>
+</form>
