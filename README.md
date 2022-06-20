@@ -2,15 +2,15 @@
 
 ![Joomla Badge](https://img.shields.io/badge/Joomla-5091CD?style=for-the-badge&logo=joomla&logoColor=white) ![PHP Badge](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 
-<center>
+<div align="center">
   <img src="./.github/jlowcodelogo.png" width="350" />
-</center>
+</div>
 
-## Sobre
+## Conteúdo
 
 - [Sobre](#sobre)
-- [Uso](#uso)
-  - [Lettering style](#lettering-style)
+- [Configuração](#configuração)
+  - [Capitalization](#capitalization)
     - [Element](#element)
     - [Style](#style)
   - [Values](#values)
@@ -20,18 +20,19 @@
     - [All Records](#all-records)
     - [Desired Value](#desired-value)
     - [NULL](#null)
+- [Uso](#uso)
 
-## Sobre
+## 💭 Sobre
 
-O plugin change_value surge da necessidade de alterar valores já presentes no banco de dados a partir de um elemento de lista do Fabrik. Sendo responsável por verificar o valor atual do elemento e mudá-lo de acordo com as definições do plugin.
+O plugin change_value surge da necessidade de alterar valores já presentes no banco de dados a partir de um elemento de lista do Fabrik. Sendo responsável por verificar o valor atual do elemento e mudá-lo de acordo com as definições do plugin. Sendo também possível alterar o tipo de caixa (caixa alta, caixa baixa e outros) a qual um dado será gravado no banco de dados.
 
-## Uso
+## ⚙️ Configuração
 
-Com o plugin devidamente instalado no Joomla, ha duas opcoes de configuracao:
+Com o plugin devidamente instalado no Joomla, há duas opções de configuração:
 
-### Lettering style
+### Capitalization
 
-Responsavel por alterar a forma como o valor caracter sera armazenado no banco de dados:
+Responsavel por lidar diretamente com o estilo de letra (no que diz respeito à caixa) que será registrado no banco de dados.
 
 #### Element
 
@@ -41,7 +42,7 @@ Selecionar o elemento ao qual sera aplicado o estilo de letra.
 
 #### Style
 
-Selecionar o tipo de estilo de letra que sera salvo no banco de dados.
+Selecionar o tipo de estilo de caixa da letra que será salvo no banco de dados.
 
 - UPPERCASE: Salvara o registro no banco de dados em MAIUSCULO.
 
@@ -61,7 +62,7 @@ Selecionar o tipo de estilo de letra que sera salvo no banco de dados.
 
 ### Values
 
-Responsavel por alterar os valores em si que serao armazenados no banco de dados.
+Responsavel por substituir um valor atual digitado pelo usuário no Element para um outro valor predefinido no plugin.
 
 #### Element
 
@@ -101,3 +102,39 @@ Inserir o valor que substituira o `Current Value` do `Element`.
 Marcar caso queira trocar o `Current Value` do `Element` por `NULL`.
 
 ![Element](./.github/13.png)
+
+## 💻 Uso
+
+### Captalization
+
+Com o plugin configurado para UPPERCASE, basta inserir o valor no Element escolhido nas configurações do plugin que este será automaticamente transformado em UPPERCASE.
+
+<div align="center">
+  <img src="./.github/14.png" alt="Example captalization image" width=800><br>
+  Inserindo o valor no element
+</div><br>
+
+<div align="center">
+  <img src="./.github/16.png" alt="Example captalization image" width=800><br>
+  Valor na lista
+</div><br>
+
+<div align="center">
+  <img src="./.github/15.png" alt="Example captalization image" width=300><br>
+  Valor no banco de dados
+</div><br>
+
+### Values
+
+Values configurado para que o `Current Value` igual a `ALL_LETTERS_SHOULD_BE_IN_UPPER_CASE` ser substituído por `brand_new_value` (sendo o `Desired Value`).
+
+_Atenção_: Neste caso também está habilitado o Captalization como uppercase, ou seja, o valor `brand_new_value` será `BRAND_NEW_VALUE`.
+
+<div align="center">
+  <img src="./.github/17.png" alt="Example captalization image" width=300><br>
+  Plugin configurado
+</div><br>
+<div align="center">
+  <img src="./.github/18.png" alt="Example captalization image" width=700><br>
+  Valor substituído após submissão do formulário "Adicionar"
+</div><br>
